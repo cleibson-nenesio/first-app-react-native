@@ -65,7 +65,7 @@ const styles = StyleSheet.create({
   },
   balance: {
     fontSize: 22,
-    color: '#2ecc71',
+    color: '#2ecc71', 
     fontWeight: 'bold',
   },
   expenses: {

@@ -1,38 +1,50 @@
 // React
-import React from 'react';
+import React, { useContext } from 'react';
 import { Text, TouchableOpacity } from 'react-native';
 
 // React-Native
 import { View, StyleSheet, ScrollView } from 'react-native';
 
 // Icons
-import { AntDesign, Feather } from '@expo/vector-icons';
+import { AntDesign } from '@expo/vector-icons';
+
+// Libraries
+import { navigate } from '../../../../RootNavigation';
 
 const Actions: React.FC = () => {
   const allButtons = [
     {
       label: 'Entradas',
       icon: 'addfolder',
+      path: 'Home',
     },
     {
       label: 'Compras',
       icon: 'tagso',
+      path: 'Home',
     },
     {
       label: 'Carteira',
       icon: 'creditcard',
+      path: 'Home',
     },
     {
       label: 'Boleto',
       icon: 'barcode',
+      path: 'Home',
     },
     {
       label: 'Conta',
       icon: 'user',
+      path: 'Account',
+      params: {
+        name: 'John Doe',
+      },
     },
     {
       label: 'Configurações',
       icon: 'setting',
+      path: 'Home',
     },
   ];
 
@@ -43,6 +55,7 @@ const Actions: React.FC = () => {
           <TouchableOpacity
             style={styles.actionButton}
             activeOpacity={0.6}
+            onPress={() => navigate(item?.path, item?.params)}
             key={item?.label}
           >
             <View style={styles.areaButton}>

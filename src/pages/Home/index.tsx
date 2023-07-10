@@ -1,5 +1,11 @@
 // React-Native
-import { FlatList, StyleSheet, Text, View } from 'react-native';
+import {
+  FlatList,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from 'react-native';
 
 // Components
 import Header from '../../components/global/Header';
